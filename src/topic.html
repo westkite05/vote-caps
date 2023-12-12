@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>투표 사이트</title>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/styles.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <!-- Navbar 추가 -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <div class="container-nav">
+        <a class="navbar-brand" href="/">칰챀촠조 투표 사이트</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav m-auto">
+            <!-- 네비게이션 링크 추가 -->
+            <li class="nav-item">
+              <a class="nav-link" href="./topic.html">Topic</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./git.html">Github</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="container" style="width: 60%; height: 120vh">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="row">
+            <h1 class="text-center">
+              새로 추가된 주제 - <span id="tag"></span>
+            </h1>
+          </div>
+          <hr />
+          <br />
+          <div id="loader">
+            <p class="text-center">잠시만 기다려주세요</p>
+          </div>
+          <div id="content" style="display: none">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col">주제</th>
+                </tr>
+              </thead>
+              <tbody id="candidatesResults"></tbody>
+            </table>
+            <hr />
+
+            <form id="voteTopicForm">
+              <label for="voteTopic">투표 주제:</label>
+              <input type="text" id="voteTopic" required />
+              <button type="submit" class="btn">주제 설정</button>
+            </form>
+
+            <div id="note">주제는 한 사람당 한 주제만 입력해 주세요.</div>
+            <hr />
+            <div id="voteStatus" style="display: none">
+              이미 투표하셨습니다.
+            </div>
+            <div id="accountAddress" class="text-center"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/web3.min.js"></script>
+    <script src="js/truffle-contract.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>
